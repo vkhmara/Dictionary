@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hebrew_dictionary/Pages/MainPage.dart';
 import 'package:hebrew_dictionary/Pages/TestDetailsPage.dart';
-import 'package:hebrew_dictionary/Pages/TestResultPage.dart';
-import 'package:hebrew_dictionary/Pages/TestSettingsPage.dart';
-import 'package:hebrew_dictionary/Pages/TestingPage.dart';
 import 'package:hebrew_dictionary/Settings/Settings.dart';
 import 'package:hebrew_dictionary/WorkWithData/DatabaseManager.dart';
 import 'package:hebrew_dictionary/WorkWithData/Dictionary.dart';
 import 'package:provider/provider.dart';
 
-import 'WorkWithData/Note.dart';
+import 'WorkWithData/Language.dart';
 
 void main() async {
 

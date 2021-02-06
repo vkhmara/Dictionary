@@ -5,7 +5,7 @@ import 'package:hebrew_dictionary/Pages/AddWordPage.dart';
 import 'package:hebrew_dictionary/Pages/AllDictPage.dart';
 import 'package:hebrew_dictionary/Pages/TestSettingsPage.dart';
 import 'package:hebrew_dictionary/Settings/Settings.dart';
-import 'package:hebrew_dictionary/WorkWithData/Note.dart';
+import 'package:hebrew_dictionary/WorkWithData/Language.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {

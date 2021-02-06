@@ -1,6 +1,8 @@
 import 'package:hebrew_dictionary/WorkWithData/Dictionary.dart';
 import 'package:hebrew_dictionary/WorkWithData/Note.dart';
 
+import 'Language.dart';
+
 class TestingSystem {
   static const int MIN_WORDS = 5;
   List<Note> _testList;

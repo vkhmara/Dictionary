@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hebrew_dictionary/WorkWithData/Note.dart';
 
+import 'Language.dart';
+
 class Dictionary<T extends Language> extends ChangeNotifier {
   List<Note> _dict;
 

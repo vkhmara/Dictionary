@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:hebrew_dictionary/WorkWithData/DateTimeUtility.dart';
 import 'package:sqflite/sqflite.dart';
 
+import 'Language.dart';
 import 'Note.dart';
 
 class DatabaseManager extends ChangeNotifier {

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hebrew_dictionary/Settings/Settings.dart';
 import 'package:hebrew_dictionary/WorkWithData/DatabaseManager.dart';
 import 'package:hebrew_dictionary/WorkWithData/Dictionary.dart';
+import 'package:hebrew_dictionary/WorkWithData/Language.dart';
 import 'package:hebrew_dictionary/WorkWithData/Note.dart';
 import 'package:provider/provider.dart';
 

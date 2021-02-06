@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hebrew_dictionary/HelperComponents/DatePicker.dart';
 import 'package:hebrew_dictionary/Pages/TestingPage.dart';
 import 'package:hebrew_dictionary/WorkWithData/Dictionary.dart';
-import 'package:hebrew_dictionary/WorkWithData/Note.dart';
+import 'package:hebrew_dictionary/WorkWithData/Language.dart';
 import 'package:hebrew_dictionary/WorkWithData/TestingSystem.dart';
 import 'package:provider/provider.dart';
 

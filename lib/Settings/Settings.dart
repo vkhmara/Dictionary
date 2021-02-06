@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hebrew_dictionary/WorkWithData/Note.dart';
+import 'package:hebrew_dictionary/WorkWithData/Language.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Settings extends ChangeNotifier{
