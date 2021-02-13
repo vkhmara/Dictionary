@@ -131,63 +131,55 @@ class _NoteInDictState extends State<NoteInDict> {
     if (editMode) {
       return editingNote(context);
     }
-    return GestureDetector(
-      child: Container(
-        padding: widget.note.learnt ? EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0) :
-        EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-        decoration: BoxDecoration(
-            border: Border.all(width: 0.1),
-            color: widget.note.learnt ? Color(0x40FFFFFF) : Color(0xE0FFFFFF),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  Checkbox(
-                    value: widget.note.learnt,
-                    onChanged: (bool value) async {
-                      Note note = Note.fromNote(widget.note);
-                      note.learnt = !note.learnt;
-                      await editNote(widget.note, note);
-                    },
-                  ),
-                  word(widget.note.translation.word),
-                ],
-              ),
-            ),
-
-            Container(
-              child: Row(
-                children: [
-                  word(widget.note.word.word),
-                  PopupMenuButton(
-                      onSelected: _handleMenuAction,
-                      itemBuilder: (context) =>
-                      [
-                        PopupMenuItem(
-                          child: Text('Delete'),
-                          value: 'Delete',
-                        ),
-                        PopupMenuItem(
-                          child: Text('Edit'),
-                          value: 'Edit',
-                        ),
-                      ]
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
+    return Container(
+      padding: widget.note.learnt ? EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0) :
+      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+      decoration: BoxDecoration(
+          border: Border.all(width: 0.1),
+          color: widget.note.learnt ? Color(0xA0CFCFCF) : Color(0xE0FFFFFF),
       ),
-      onTap: widget.unfocus,
-      onDoubleTap: () async {
-        Note note = Note.fromNote(widget.note);
-        note.learnt = !note.learnt;
-        await editNote(widget.note, note);
-      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Checkbox(
+                  value: widget.note.learnt,
+                  onChanged: (bool value) async {
+                    Note note = Note.fromNote(widget.note);
+                    note.learnt = !note.learnt;
+                    await editNote(widget.note, note);
+                  },
+                ),
+                word(widget.note.translation.word),
+              ],
+            ),
+          ),
+
+          Container(
+            child: Row(
+              children: [
+                word(widget.note.word.word),
+                PopupMenuButton(
+                    onSelected: _handleMenuAction,
+                    itemBuilder: (context) =>
+                    [
+                      PopupMenuItem(
+                        child: Text('Delete'),
+                        value: 'Delete',
+                      ),
+                      PopupMenuItem(
+                        child: Text('Edit'),
+                        value: 'Edit',
+                      ),
+                    ]
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 

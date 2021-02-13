@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:hebrew_dictionary/Pages/AddWordPage.dart';
 import 'package:hebrew_dictionary/Pages/AllDictPage.dart';
@@ -15,8 +16,19 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   static int currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
+    StatefulWidget page;
+    if (currentPage == 0) {
+      page = AllDictPage();
+    }
+    else if (currentPage == 1) {
+      page = AddWordPage();
+    }
+    else {
+      page = TestSettingsPage();
+    }
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -38,14 +50,15 @@ class _MainPageState extends State<MainPage> {
                   });
                 }
               },
-              itemBuilder: (context) => [
+              itemBuilder: (context) =>
+              [
                 PopupMenuItem(
-                    child: Text('Английский'),
+                  child: Text('Английский'),
                   value: 'eng',
                 ),
                 PopupMenuItem(
                     child: Text('Иврит'),
-                  value: 'heb'
+                    value: 'heb'
                 ),
               ],
             ),
@@ -73,7 +86,7 @@ class _MainPageState extends State<MainPage> {
                 });
               },
             ),
-          ListTile(
+            ListTile(
               title: Text('Тест'),
               onTap: () {
                 setState(() {
@@ -85,23 +98,9 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      body: ((page) {
-        switch (page) {
-          case 0:
-            return AllDictPage();
-          case 1:
-            return AddWordPage();
-          case 2:
-            return TestSettingsPage();
-        }
-      })(currentPage),
+      body: page,
       backgroundColor: Color(0xF0F0F0F0),
     );
-  }
-  void toMainPage() {
-    setState(() {
-      currentPage = 0;
-    });
   }
 
   @override

@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hebrew_dictionary/HelperComponents/ScreenCenterForm.dart';
-import 'package:hebrew_dictionary/Settings/Settings.dart';
 import 'package:hebrew_dictionary/WorkWithData/Note.dart';
 import 'package:hebrew_dictionary/WorkWithData/TestingSystem.dart';
 

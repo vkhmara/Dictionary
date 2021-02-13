@@ -26,7 +26,7 @@ class Language {
 }
 
 class Hebrew extends Language {
-  static const String NEKUDOT = ' ְ ֶ ֵ ּ ַ ִ ֹ ֲ ֱ ֳ ֹ ֻ ׂ ';
+  static const String NEKUDOT = ' ְ ֶ ֵ ּ ַ ִ ֹ ֲ ֱ ֳ ֹ ֻ ׂ ָ';
   Hebrew() {
     alphabet += ' ְ ֶ ֵ ּ ַ ִ ֹ ֲ ֱ ֳ ֹ ֻ ׂ ָקראטוןםפשדגכעיחלךףזסבהנמצתץ';
   }
